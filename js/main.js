@@ -17,3 +17,10 @@ $('.reply__nav.prev').click(function(){
 $('.reply__nav.next').click(function(){
     $('.reply').slick('slickNext');
 });
+
+
+//  Modal
+
+$(".btn-modal").fancybox({
+    'padding'    : 0
+});

@@ -58,6 +58,7 @@
 		}
 
 		.gray {
+			display: block;
 			color: #535a5f;
 		}
 
@@ -110,6 +111,12 @@
 				font-size: 36px;
 			}
 
+		}
+
+		.footer__adr {
+			.gray {
+				display: inline;=
+			}
 		}
 	}
 

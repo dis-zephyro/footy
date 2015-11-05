@@ -1,28 +1,129 @@
-.form-control {
-	margin: 0;
-	width: 100%;
-	color: #eee;
-	border: none;
-	outline: none;
-	font-size: 16px;
-	line-height: 20px;
-	padding: 10px 10px;
-	font-style: italic;
-	display: inline-block;
-	background: transparent;
-	border-bottom: 1px solid #eee;
-	@include placeholder(#eee);
+.form-box {
+	color: #fff;
+	width: 290px;
+	padding: 25px 24px;
+	background: #141e26;
+	border: 1px solid #93b6d1;
 
-	&::-ms-clear {
-		display: none;
-		width: 0;
-		height: 0;
+	.form-box-title {
+		color: #fff;
+		font-size: 24px;
+		line-height: 24px;
+		text-align: center;
+		position: relative;
+		margin-bottom: 25px;
+		padding-bottom: 25px;
+		font-family: $font-pfd;
+		text-transform: uppercase;
+		background: url("../img/form-box-title.png") 50% 100% no-repeat;
+
+		span {
+			color: #c3a74c;
+			display: block;
+			font-size: 36px;
+			line-height: 36px;
+		}
 	}
 
-	&.invert {
-		color: #5b646e;
-		border-color: #5b646e;
-		@include placeholder(#5b646e);
+	ol {
+		margin: 0;
+		list-style: none;
+		padding: 0 0 10px 0;
+
+		li {
+			margin-bottom: 20px;
+		}
+	}
+
+	input[type="text"] {
+		width: 100%;
+		color: #fff;
+		outline: none;
+		display: block;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 20px;
+		padding: 9px 10px;
+		text-align: center;
+		background: transparent;
+		border: 1px solid #564f39;
+		@include placeholder(#fff);
+
+		&:focus {
+			@include placeholder(transparent);
+		}
+	}
+
+	.sendbutton {
+		width: 100%;
+		color: #fff;
+		outline: none;
+		cursor: pointer;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 20px;
+		padding: 8px 10px;
+		text-align: center;
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+		background: transparent;
+		text-transform: uppercase;
+		border: 2px solid #d4b75b;
+
+		&:hover {
+			color: #141e26;
+			background: #d4b75b;
+		}
+
+		&:active {
+			top: 1px;
+		}
+	}
+
+	.sup {
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 20px;
+		padding-top: 2px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	@media (min-width: $screen-md-min) {
+		width: 400px;
+		padding: 50px 55px;
+
+		.form-box-title {
+			font-size: 30px;
+			line-height: 30px;
+			margin-bottom: 25px;
+			padding-bottom: 30px;
+
+			span {
+				font-size: 46px;
+				line-height: 50px;
+			}
+		}
+
+		input[type="text"] {
+			font-size: 17px;
+			font-weight: 300;
+			line-height: 20px;
+			padding: 15px 10px;
+		}
+
+		.sendbutton {
+			width: 100%;
+			color: #fff;
+			outline: none;
+			cursor: pointer;
+			padding: 25px 10px;
+		}
+
+		.sup {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -42,8 +143,4 @@
 label {
 	font-weight: 400;
 	display: block;
-}
-
-.form-group {
-	margin-bottom: 20px;
 }

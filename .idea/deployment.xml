@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="footy" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="footy">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/www/zephyrus.ru/project/2015/footy" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
