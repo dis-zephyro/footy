@@ -1,0 +1,149 @@
+.b02 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: url("../img/b02_bg.jpg") 50% 100% no-repeat;
+
+	.b02__top {
+		margin-bottom: 50px;
+		position: relative;
+
+		h2 {
+			color:  #1f313f;
+			font-size: 24px;
+			line-height: 25px;
+			font-family: $font-pfd;
+			position: relative;
+			text-transform: uppercase;
+		}
+
+		.text {
+			min-height: 90px;
+			font-size: 12px;
+			line-height: 14px;
+			padding-left: 20px;
+			margin-top: 15px;
+			background: url("../img/b02_line.png") 0 0 no-repeat;
+		}
+	}
+
+	.what {
+		text-align: center;
+
+
+		.what__item {
+			max-width: 210px;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 16px;
+			display: inline-block;
+
+			.what__icon {
+				margin-bottom: 8px;
+				display: inline-block;
+
+				img {
+					@include img-responsive(inline-block);
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-xs-min) {
+		background-position: 38% 100%;
+
+		.b02__top {
+			margin-bottom: 70px;
+
+			h2 {
+				color:  #1f313f;
+				font-size: 40px;
+				line-height: 40px;
+				font-family: $font-pfd;
+			}
+
+			.text {
+				font-size: 16px;
+				line-height: 20px;
+				padding-left: 30px;
+			}
+		}
+
+
+		.what {
+			margin-top: -30px;
+			padding-left: 170px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		padding-bottom: 80px;
+		background-position: 35% 100%;
+
+		.b02__top {
+			margin-bottom: 80px;
+
+			h2 {
+				color:  #1f313f;
+				font-size: 50px;
+				line-height: 50px;
+				font-family: $font-pfd;
+			}
+
+			.text {
+				padding-left: 40px;
+			}
+		}
+
+		.what {
+			margin-top: -30px;
+			padding-left: 300px;
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		padding-bottom: 40px;
+		background-position: 50% 100%;
+
+		.b02__top {
+			margin-bottom: 80px;
+
+			h2 {
+				top: -50px;
+				color:  #1f313f;
+				font-size: 80px;
+				line-height: 80px;
+				font-family: $font-pfd;
+			}
+
+			.text {
+				font-size: 20px;
+				line-height: 24px;
+				padding-left: 60px;
+			}
+		}
+
+		.what {
+			margin-top: -30px;
+			padding-left: 300px;
+
+			.what__item {
+				height: 210px;
+			}
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+
+		.b02__top {
+			margin-bottom: 80px;
+
+			.text {;
+				padding-left: 60px;
+			}
+		}
+
+		.what {
+			padding-left: 300px;
+		}
+	}
+}

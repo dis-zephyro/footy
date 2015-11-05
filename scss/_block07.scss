@@ -1,0 +1,139 @@
+.b07 {
+	padding-top: 50px;
+	padding-bottom: 140px;
+	position: relative;
+	background: #fff url("../img/b07_bg.jpg") 50% 100% no-repeat;
+
+	.container {
+		z-index: 10;
+	}
+
+	h2 {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+
+	.requirements {
+		text-align: center;
+
+		.requirements__item {
+			height: 160px;
+			max-width: 200px;
+			font-size: 12px;
+			font-weight: 600;
+			line-height: 16px;
+			margin-bottom: 40px;
+			display: inline-block;
+
+			.what__icon {
+				margin-bottom: 10px;
+				display: inline-block;
+
+				img {
+					@include img-responsive(inline-block);
+				}
+			}
+
+			strong {
+				color: #c5a640;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.requirements__bottom {
+		padding-top: 35px;
+		text-align: center;
+		border-top: 1px solid #dddddd;
+
+		.text {
+			color: #1f313f;
+			padding: 10px 0;
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 16px;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+		}
+
+		.btn-info {
+			width: 260px;
+		}
+	}
+
+	@media (min-width: $screen-xs-min) {
+
+		h2 {
+			font-size: 40px;
+			margin-bottom: 40px;
+		}
+
+		.requirements {
+
+			.requirements__item {
+				font-size: 14px;
+			}
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+
+		h2 {
+			font-size: 60px;
+			margin-bottom: 40px;
+		}
+
+	}
+
+	@media (min-width: $screen-md-min) {
+		padding-top: 130px;
+		padding-bottom: 140px;
+
+		&:after {
+			left: 0;
+			right: 0;
+			top: -60px;
+			height: 695px;
+			content: ' ';
+			z-index: 1;
+			position: absolute;
+			background: url("../img/b07_boy.png") 50% 0 no-repeat;
+		}
+
+		h2 {
+			font-size: 70px;
+			margin-bottom: 60px;
+		}
+
+		.requirements {
+			padding-left: 300px;
+		}
+
+		.requirements__bottom {
+			text-align: left;
+			padding-left: 70px;
+			padding-right: 70px;
+
+			.text {
+				margin-bottom: 0;
+			}
+		}
+
+
+		.what__item {
+			font-size: 16px;
+			line-height: 21px;
+
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+
+		.requirements__bottom {
+			padding-left: 120px;
+			padding-right: 120px;
+
+		}
+	}
+}

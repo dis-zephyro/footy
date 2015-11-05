@@ -1,0 +1,182 @@
+.b04 {
+	padding-top: 30px;
+	padding-bottom: 100px;
+	background: url("../img/b04_bg.jpg") bottom center no-repeat;
+
+	h2 {
+		color: #1f313f;
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	.reply-inner {
+		margin-bottom: 40px;
+		position: relative;
+	}
+
+	.reply {
+		position: relative;
+
+		.reply__item {
+			outline: none;
+			text-align: center;
+			padding-bottom: 25px;
+		}
+
+		.reply__image {
+			width: 114px;
+			height: 113px;
+			padding: 7px 7px;
+			display: inline-block;
+			margin-bottom: 40px;
+			background: url("../img/reply_active.png") 0 0 no-repeat;
+
+			img {
+				width: 99px;
+				height: 99px;
+			}
+		}
+
+		.reply__author {
+			font-size: 24px;
+			line-height: 25px;
+			position: relative;
+			margin-bottom: 15px;
+			padding-bottom: 15px;
+			font-family: $font-pfd;
+			text-transform: uppercase;
+
+			&:before {
+				left: 50%;
+				bottom: 0;
+				width: 60px;
+				content: ' ';
+				margin-left: -30px;
+				position: absolute;
+				border-top: 1px solid #c0a242;
+			}
+		}
+
+		.reply__text {
+			font-size: 15px;
+			line-height: 21px;
+		}
+	}
+
+	.reply__nav {
+		top: 50px;
+		width: 9px;
+		height: 15px;
+		cursor: pointer;
+		position: absolute;
+		background: url("../img/reply_nav.png") no-repeat;
+
+		&.prev {
+			left: 50%;
+			margin-left: -80px;
+			background-position: 0 -28px;
+		}
+
+		&.next {
+			right: 50%;
+			margin-right: -80px;
+			background-position: -9px -28px;
+		}
+	}
+
+	.slick-dots {
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		line-height: 0;
+		list-style: none;
+		text-align: center;
+
+		li {
+			width: 16px;
+			height: 14px;
+			margin: 0 5px;
+			overflow: hidden;
+			display: inline-block;
+
+			button {
+				width: 16px;
+				height: 14px;
+				border: none;
+				outline: none;
+				overflow: hidden;
+				background: transparent url("../img/reply_nav.png") 0 0 no-repeat;
+			}
+
+			&.slick-active {
+				button {
+					background-position: 0 -14px;
+				}
+			}
+		}
+	}
+
+	.content {
+
+		.text {
+			font-size: 16px;
+			line-height: 24px;
+			min-height: 90px;
+			padding-right: 30px;
+			margin-bottom: 40px;
+			background: url("../img/b02_line.png") top right no-repeat;
+		}
+
+		.btn-info {
+
+		}
+
+		.info {
+			height: 36px;
+			color: #1f313f;
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 30px;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+	}
+
+	@media (min-width: $screen-xs-min) {
+
+		h2 {
+			font-size: 40px;
+			margin-bottom: 40px;
+		}
+
+		.content {
+			float: right;
+			width: 380px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		padding-bottom: 140px;
+
+		h2 {
+			font-size: 50px;
+			margin-bottom: 50px;
+		}
+
+	}
+
+	@media (min-width: $screen-md-min) {
+
+		h2 {
+			font-size: 60px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+
+		h2 {
+			margin-bottom: 60px;
+		}
+	}
+}

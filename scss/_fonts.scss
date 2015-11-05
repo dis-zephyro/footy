@@ -1,0 +1,69 @@
+@font-face {
+	font-family:'PFDinTextCompPro';
+	src: url('../fonts/PFDinTextCompPro-Bold/PFDinTextCompPro-Bold_gdi.eot');
+	src: url('../fonts/PFDinTextCompPro-Bold/PFDinTextCompPro-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/PFDinTextCompPro-Bold/PFDinTextCompPro-Bold_gdi.woff') format('woff'),
+	url('../fonts/PFDinTextCompPro-Bold/PFDinTextCompPro-Bold_gdi.ttf') format('truetype'),
+	url('../fonts/PFDinTextCompPro-Bold/PFDinTextCompPro-Bold_gdi.svg#PFDinTextCompPro-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+
+@font-face {
+	font-family:'SegoeUI';
+	src: url('../fonts/SegoeUILight/SegoeUI-Light.eot');
+	src: url('../fonts/SegoeUILight/SegoeUI-Light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/SegoeUILight/SegoeUI-Light.woff') format('woff'),
+	url('../fonts/SegoeUILight/SegoeUI-Light.ttf') format('truetype'),
+	url('../fonts/SegoeUILight/SegoeUI-Light.svg#SegoeUI-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+000D-2666;
+}
+
+@font-face {
+	font-family:'SegoeUI';
+	src: url('../fonts/SegoeUIRegular/SegoeUI.eot');
+	src: url('../fonts/SegoeUIRegular/SegoeUI.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/SegoeUIRegular/SegoeUI.woff') format('woff'),
+	url('../fonts/SegoeUIRegular/SegoeUI.ttf') format('truetype'),
+	url('../fonts/SegoeUIRegular/SegoeUI.otf') format('opentype'),
+	url('../fonts/SegoeUIRegular/SegoeUI.svg#SegoeUI-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2666;
+}
+
+@font-face {
+	font-family:'SegoeUI';
+	src: url('../fonts/SegoeUISemiBold/SegoeUI-SemiBold.eot');
+	src: url('../fonts/SegoeUISemiBold/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/SegoeUISemiBold/SegoeUI-SemiBold.woff') format('woff'),
+	url('../fonts/SegoeUISemiBold/SegoeUI-SemiBold.ttf') format('truetype'),
+	url('../fonts/SegoeUISemiBold/SegoeUI-SemiBold.otf') format('opentype'),
+	url('../fonts/SegoeUISemiBold/SegoeUI-SemiBold.svg#SegoeUI-SemiBold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2666;
+}
+
+
+@font-face {
+	font-family:'SegoeUI';
+	src: url('../fonts/SegoeUIBold/SegoeUI-Bold.eot');
+	src: url('../fonts/SegoeUIBold/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/SegoeUIBold/SegoeUI-Bold.woff') format('woff'),
+	url('../fonts/SegoeUIBold/SegoeUI-Bold.ttf') format('truetype'),
+	url('../fonts/SegoeUIBold/SegoeUI-Bold.otf') format('opentype'),
+	url('../fonts/SegoeUIBold/SegoeUI-Bold.svg#SegoeUI-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2666;
+}

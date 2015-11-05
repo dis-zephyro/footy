@@ -1,0 +1,158 @@
+.b08 {
+	color: #fff;
+	padding-bottom: 40px;
+	background: url("../img/b08_bg.jpg") 50% 0 no-repeat;
+
+	h2 {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+
+	.warranty {
+		padding: 0;
+		margin: 0 -10px;
+		list-style: none;
+
+		li {
+			width: 50%;
+			float: left;
+			padding: 0 10px;
+			font-size: 13px;
+			line-height: 21px;
+		}
+
+		.hide-text {
+			max-width: 290px;
+			padding-top: 30px;
+			font-size: 13px;
+			line-height: 21px;
+			text-align: center;
+		}
+	}
+
+	.text {
+		margin-top: 60px;
+		font-size: 16px;
+		line-height: 20px;
+		padding-right: 30px;
+		background: url("../img/b02_line.png") right top no-repeat;
+	}
+
+	@media (min-width: $screen-xs-min) {
+		height: 1080px;
+
+		padding-bottom: 140px;
+
+		h2 {
+			font-size: 40px;
+			margin-bottom: 40px;
+		}
+
+		.text {
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 28px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		height: 1100px;
+
+		h2 {
+			font-size: 60px;
+			margin-bottom: 40px;
+		}
+
+		.text {
+			width: 590px;
+		}
+
+	}
+
+	@media (min-width: $screen-md-min) {
+
+		height: 1126px;
+		padding-top: 60px;
+
+		h2 {
+			font-size: 70px;
+			margin-bottom: 60px;
+		}
+
+		.warranty {
+
+			li {
+
+				&.item1 {
+					width: 260px;
+				}
+
+				&.item2 {
+					width: 260px;
+				}
+
+				&.item3 {
+					width: 220px;
+
+					.warranty__image {
+						padding-top: 70px;
+						padding-bottom: 30px;
+					}
+				}
+
+				&.item4 {
+					width: 220px;
+
+					.warranty__image {
+						padding-top: 70px;
+						padding-bottom: 30px;
+					}
+				}
+			}
+
+			.hide-text {
+				display: none;
+			}
+		}
+
+
+	}
+
+	@media (min-width: $screen-lg-min) {
+
+		.warranty {
+
+			li {
+
+				&.item1 {
+					width: 310px;
+				}
+
+				&.item2 {
+					width: 310px;
+				}
+
+				&.item3 {
+					width: 230px;
+					margin-right: 10px;
+
+					.warranty__image {
+						padding-top: 100px;
+						padding-bottom: 70px;
+					}
+				}
+
+				&.item4 {
+					width: 230px;
+					margin-left: 10px;
+
+					.warranty__image {
+						padding-top: 100px;
+						padding-bottom: 70px;
+					}
+				}
+			}
+		}
+	}
+}

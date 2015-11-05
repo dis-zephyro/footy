@@ -1,0 +1,39 @@
+.b10 {
+	height: 735px;
+	background: url("../img/b10_bg.jpg") 50% 100% no-repeat;
+
+	h2 {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+
+	@media (min-width: $screen-xs-min) {
+
+		h2 {
+			font-size: 40px;
+			margin-bottom: 40px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+
+		h2 {
+			font-size: 60px;
+			margin-bottom: 40px;
+		}
+
+	}
+
+	@media (min-width: $screen-md-min) {
+
+		h2 {
+			font-size: 70px;
+			margin-bottom: 60px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+
+	}
+}
