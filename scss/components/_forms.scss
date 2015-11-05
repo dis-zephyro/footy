@@ -22,6 +22,12 @@
 			display: block;
 			font-size: 36px;
 			line-height: 36px;
+			text-align: center;
+			margin-bottom: 5px;
+		}
+
+		.form-title-text {
+			@include img-responsive(inline-block);
 		}
 	}
 
@@ -139,8 +145,8 @@
 }
 
 
-
 label {
 	font-weight: 400;
 	display: block;
 }
+

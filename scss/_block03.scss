@@ -1,13 +1,68 @@
 .b03 {
 	color: #fff;
-	z-index: 50;
+	z-index: 20;
 	height: 400px;
+	margin-top: -50px;
+	position: relative;
+	background: #162433;
 
-	background: url("../img/b03_bg.png") 50% -100px no-repeat;
+
+	&:before {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 40;
+		content: ' ';
+		height: 111px;
+		position: absolute;
+		background: url("../img/b03bottom_bg.png") bottom center no-repeat;
+	}
+
+	&:after {
+		top: 40px;
+		left: 0;
+		right: 0;
+		z-index: 50;
+		content: ' ';
+		height: 72px;
+		display: none;
+		position: absolute;
+		background: url("../img/b03-top.png") top center no-repeat;
+	}
 
 	.container {
+		z-index: 100;
 		height: 100%;
 	}
+
+
+	.video-bg {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		overflow: hidden;
+		z-index: 1;
+		background-size: cover;
+	}
+
+	.video-inner {
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+		> video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+
 
 	h2 {
 		font-size: 30px;
@@ -38,7 +93,10 @@
 		margin-top: -80px;
 		padding-top: 120px;
 		height: 766px;
-		background-position: 50% 0;
+
+		&:after {
+			display: block;
+		}
 
 		h2 {
 			font-size: 70px;
@@ -61,5 +119,23 @@
 
 	@media (min-width: $screen-lg-min) {
 		height: 766px;
+	}
+
+
+	@media (min-aspect-ratio: 16/9) {
+		.video-inner > video { height: 300%; top: -100%; }
+	}
+	@media (max-aspect-ratio: 16/9) {
+		.video-inner > video { width: 300%; left: -100%; }
+	}
+
+	@supports (object-fit: cover) {
+		.video-inner > video {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 }

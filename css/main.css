@@ -2247,6 +2247,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
+  position: relative;
   font-family: "SegoeUI", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
@@ -3052,7 +3053,13 @@ ul {
       color: #c3a74c;
       display: block;
       font-size: 36px;
-      line-height: 36px; }
+      line-height: 36px;
+      text-align: center;
+      margin-bottom: 5px; }
+    .form-box .form-box-title .form-title-text {
+      display: inline-block;
+      max-width: 100%;
+      height: auto; }
   .form-box ol {
     margin: 0;
     list-style: none;
@@ -3559,9 +3566,11 @@ label {
       bottom: 250px; } }
 
 .b02 {
+  z-index: 50;
+  position: relative;
   padding-top: 40px;
-  padding-bottom: 40px;
-  background: url("../img/b02_bg.jpg") 50% 100% no-repeat; }
+  padding-bottom: 80px;
+  background: url("../img/b02_bg.png") 50% 100% no-repeat; }
   .b02 .b02__top {
     margin-bottom: 50px;
     position: relative; }
@@ -3658,11 +3667,54 @@ label {
 
 .b03 {
   color: #fff;
-  z-index: 50;
+  z-index: 20;
   height: 400px;
-  background: url("../img/b03_bg.png") 50% -100px no-repeat; }
+  margin-top: -50px;
+  position: relative;
+  background: #162433; }
+  .b03:before {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    content: ' ';
+    height: 111px;
+    position: absolute;
+    background: url("../img/b03bottom_bg.png") bottom center no-repeat; }
+  .b03:after {
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    content: ' ';
+    height: 72px;
+    display: none;
+    position: absolute;
+    background: url("../img/b03-top.png") top center no-repeat; }
   .b03 .container {
+    z-index: 100;
     height: 100%; }
+  .b03 .video-bg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    background-size: cover; }
+  .b03 .video-inner {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .b03 .video-inner > video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto; }
   .b03 h2 {
     font-size: 30px;
     text-align: right;
@@ -3684,8 +3736,9 @@ label {
     .b03 {
       margin-top: -80px;
       padding-top: 120px;
-      height: 766px;
-      background-position: 50% 0; }
+      height: 766px; }
+      .b03:after {
+        display: block; }
       .b03 h2 {
         font-size: 70px; }
       .b03 .icon_play {
@@ -3699,6 +3752,21 @@ label {
   @media (min-width: 1170px) {
     .b03 {
       height: 766px; } }
+  @media (min-aspect-ratio: 16 / 9) {
+    .b03 .video-inner > video {
+      height: 300%;
+      top: -100%; } }
+  @media (max-aspect-ratio: 16 / 9) {
+    .b03 .video-inner > video {
+      width: 300%;
+      left: -100%; } }
+  @supports (object-fit: cover) {
+    .b03 .video-inner > video {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; } }
 
 .b04 {
   padding-top: 30px;
@@ -3935,6 +4003,41 @@ label {
     line-height: 30px;
     display: inline-block;
     text-transform: uppercase; }
+  .b05 .btn-compare {
+    padding: 0;
+    width: 448px;
+    text-align: center;
+    margin: 0 auto 35px auto; }
+    .b05 .btn-compare li {
+      float: left;
+      width: 224px;
+      font-size: 0;
+      line-height: 0;
+      position: relative; }
+      .b05 .btn-compare li:first-child label {
+        background-position: 0 -46px; }
+      .b05 .btn-compare li:first-child input[type=radio]:checked + label {
+        background-position: 0 0; }
+      .b05 .btn-compare li:last-child label {
+        background-position: 100% -69px; }
+      .b05 .btn-compare li:last-child input[type=radio]:checked + label {
+        background-position: 100% -23px; }
+    .b05 .btn-compare label {
+      width: 100%;
+      height: 23px;
+      color: #e8c24a;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      line-height: 17px;
+      padding: 3px 10px;
+      position: relative;
+      display: inline-block;
+      background: #fff url("../img/btn-compare.png") no-repeat; }
+    .b05 .btn-compare input[type=radio] {
+      display: none; }
+    .b05 .btn-compare input[type=radio]:checked + label {
+      color: #fff; }
   @media (min-width: 480px) {
     .b05 h2 {
       font-size: 40px;
@@ -4008,7 +4111,9 @@ label {
             .b05 .comparison ul li:first-child {
               height: auto; }
           .b05 .comparison ul.comparison__rest {
-            display: block; } }
+            display: block; }
+      .b05 .btn-compare {
+        display: none; } }
   @media (min-width: 992px) {
     .b05 h2 {
       font-size: 70px;
