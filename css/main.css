@@ -3409,6 +3409,65 @@ label {
 .embed-responsive-4by3 {
   padding-bottom: 75%; }
 
+html, body {
+  height: 100%; }
+
+.preloader-inner {
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(22, 36, 51, 0.8); }
+
+.preload-juggle {
+  z-index: 100;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -150px; }
+  .preload-juggle div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-size: cover;
+    margin-top: 150px;
+    margin-left: 150px;
+    animation: juggle 2.6s linear infinite;
+    background-image: url(http://www.mykonosblu.com/assets/media/PICTURES/userfiles/images/images/CAPE%20SOUNIO/ball.png); }
+  .preload-juggle div:nth-child(1) {
+    animation-delay: -0.86667s; }
+  .preload-juggle div:nth-child(2) {
+    animation-delay: -1.73333s; }
+
+@keyframes juggle {
+  0% {
+    transform: translateX(0px) translateY(0px);
+    background-image: url(http://www.mykonosblu.com/assets/media/PICTURES/userfiles/images/images/CAPE%20SOUNIO/ball.png); }
+  12.5% {
+    transform: translateX(50px) translateY(-80px) scale(1.1); }
+  25% {
+    transform: translateX(100px) translateY(0px);
+    animation-timing-function: ease-out; }
+  37.5% {
+    transform: translateX(50px) translateY(80px); }
+  50% {
+    transform: translateX(0px) translateY(0px); }
+  62.5% {
+    transform: translateX(-50px) translateY(-80px) scale(1.1);
+    animation-timing-function: ease-in; }
+  75% {
+    transform: translateX(-100px) translateY(0px);
+    animation-timing-function: ease-out; }
+  87.5% {
+    transform: translateX(-50px) translateY(80px); }
+  100% {
+    transform: translateX(0px) translateY(0px); } }
 /* Slider */
 .slick-slider {
   position: relative;
@@ -3721,7 +3780,7 @@ label {
       right: 0;
       bottom: 0;
       z-index: 5;
-      content: '';
+      content: ' ';
       position: absolute;
       background: url("../img/b03_pattern.png") top center repeat-y; }
   .b03 h2 {

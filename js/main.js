@@ -1,3 +1,8 @@
+$(window).on('load', function () {
+    var $preloader = $('.preloader-inner');
+    $preloader.delay(1500).fadeOut('slow');
+});
+
 
 ///Reply Slider
 

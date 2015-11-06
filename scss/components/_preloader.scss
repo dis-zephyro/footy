@@ -1,0 +1,91 @@
+$boxWidth: 300px;
+$ballWidth: 40px;
+$translateX: 100px;
+$translateY: 80px;
+$time: 2.6s;
+$scale: 1.1;
+
+html,body {
+	height:100%;
+}
+body {
+
+}
+
+.preloader-inner {
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(22,36,51, .8);
+}
+
+.preload-juggle {
+	z-index: 100;
+	width: $boxWidth;
+	height: $boxWidth;
+	position: absolute;
+	top: 50%;
+	margin-top: -$boxWidth/2;
+	left: 50%;
+	margin-left: -$boxWidth/2;
+
+	div {
+		position: absolute;
+		width: $ballWidth;
+		height: $ballWidth;
+		border-radius: $ballWidth/2;
+		//background: #fff;
+		background-size: cover;
+		margin-top: $boxWidth/2;
+		margin-left: $boxWidth/2;
+		animation: juggle $time linear infinite;
+		background-image: url(http://www.mykonosblu.com/assets/media/PICTURES/userfiles/images/images/CAPE%20SOUNIO/ball.png);
+	}
+
+	div:nth-child(1) {
+		animation-delay: -$time/3;
+	}
+
+	div:nth-child(2) {
+		animation-delay: -$time/1.5;
+	}
+
+}
+
+
+
+@keyframes juggle {
+	0% {
+		transform: translateX(0px) translateY(0px);
+		background-image: url(http://www.mykonosblu.com/assets/media/PICTURES/userfiles/images/images/CAPE%20SOUNIO/ball.png);
+	}
+	12.5% {
+		transform: translateX($translateX/2) translateY(-$translateY) scale($scale);
+	}
+	25% {
+		transform: translateX($translateX) translateY(0px) ;
+		animation-timing-function: ease-out;  }
+	37.5% {
+		transform: translateX($translateX/2) translateY($translateY);
+	}
+	50% {
+		transform: translateX(0px) translateY(0px);
+	}
+	62.5% {
+		transform: translateX(-$translateX/2) translateY(-$translateY) scale($scale);
+		animation-timing-function: ease-in;
+	}
+	75% {
+		transform: translateX(-$translateX) translateY(0px);
+		animation-timing-function: ease-out;
+	}
+	87.5% {
+		transform: translateX(-$translateX/2) translateY($translateY);
+	}
+	100% {
+		transform: translateX(0px) translateY(0px);
+	}
+}
