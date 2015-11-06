@@ -1,6 +1,7 @@
 .form-box {
 	color: #fff;
 	width: 290px;
+	position: relative;
 	padding: 25px 24px;
 	background: #141e26;
 	border: 1px solid #93b6d1;
@@ -133,20 +134,42 @@
 	}
 }
 
-.red {
-
-	.form-control {
-		border-color: #ff0000;
-
-		&.invert {
-			border-color: #ff0000;
-		}
-	}
+.btn-close {
+	top: 15px;
+	z-index: 200;
+	right: 15px;
+	color: #FFFFFF;
+	font-size: 20px;
+	cursor: pointer;
+	position: absolute;
 }
-
 
 label {
 	font-weight: 400;
 	display: block;
 }
 
+.map-box {
+	width: 290px;
+	padding: 25px 24px;
+	position: relative;
+	background: #fff;
+
+	.btn-close {
+		top: 3px;
+		right: 5px;
+		color: #141e26;
+	}
+
+	#map {
+		height: 350px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		width: 500px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		width: 800px;
+	}
+}

@@ -1,8 +1,20 @@
-$(window).on('load', function () {
-    var $preloader = $('.preloader-inner');
-    $preloader.delay(1500).fadeOut('slow');
+$(document).ready(function() {
+
+    // Проверка на тип устройства
+    var Android = navigator.userAgent.search(/Android/i);
+    var iPhone = navigator.userAgent.search(/iPhone/i);
+    var iPad = navigator.userAgent.search(/iPad/i);
+    if(Android != -1 || iPhone != -1 || iPad != -1) {
+        $('video-bg').addClass('hide');
+    } else {}
 });
 
+
+
+$(window).on('load', function () {
+    var $preloader = $('.preloader-inner');
+    $preloader.delay(2500).fadeOut('slow');
+});
 
 ///Reply Slider
 
@@ -27,7 +39,12 @@ $('.reply__nav.next').click(function(){
 //  Modal
 
 $(".btn-modal").fancybox({
-    'padding'    : 0
+    'padding'    : 0,
+    'closeBtn'   : false
+});
+
+$('.btn-close').click(function(){
+    $.fancybox.close();
 });
 
 
@@ -61,3 +78,32 @@ $('input[type="checkbox"]').click(function() {
         check.removeClass('text-success');
     }
 });
+
+
+// Map
+
+ymaps.ready(init);
+
+var myMap,
+    myPlacemark;
+
+function init(){
+    myMap = new ymaps.Map("map", {
+        center: [48.7209,44.5032],
+        zoom: 14,
+        controls: ['smallMapDefaultSet']
+    });
+
+    myPlacemark = new ymaps.Placemark([48.7209,44.5032], {
+        hintContent: ''
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/placemark.png',
+        iconImageSize: [44, 64],
+        iconImageOffset: [-2, -65]
+    });
+
+    myMap.behaviors.disable('scrollZoom');
+    myMap.behaviors.disable('multiTouch');
+    myMap.geoObjects.add(myPlacemark);
+}

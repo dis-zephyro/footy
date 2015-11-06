@@ -3035,6 +3035,7 @@ ul {
 .form-box {
   color: #fff;
   width: 290px;
+  position: relative;
   padding: 25px 24px;
   background: #141e26;
   border: 1px solid #93b6d1; }
@@ -3146,14 +3147,36 @@ ul {
       .form-box .sup {
         font-size: 14px; } }
 
-.red .form-control {
-  border-color: #ff0000; }
-  .red .form-control.invert {
-    border-color: #ff0000; }
+.btn-close {
+  top: 15px;
+  z-index: 200;
+  right: 15px;
+  color: #FFFFFF;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute; }
 
 label {
   font-weight: 400;
   display: block; }
+
+.map-box {
+  width: 290px;
+  padding: 25px 24px;
+  position: relative;
+  background: #fff; }
+  .map-box .btn-close {
+    top: 3px;
+    right: 5px;
+    color: #141e26; }
+  .map-box #map {
+    height: 350px; }
+  @media (min-width: 768px) {
+    .map-box {
+      width: 500px; } }
+  @media (min-width: 768px) {
+    .map-box {
+      width: 800px; } }
 
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -3410,16 +3433,17 @@ label {
   padding-bottom: 75%; }
 
 html, body {
-  height: 100%; }
+  min-height: 100%; }
 
 .preloader-inner {
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 90;
   width: 100%;
   height: 100%;
-  position: absolute;
-  background: rgba(22, 36, 51, 0.8); }
+  position: fixed;
+  background: #C5A137;
+  background: radial-gradient(ellipse at center, #e8d9ad 0%, #C5A137 80%); }
 
 .preload-juggle {
   z-index: 100;
@@ -3730,7 +3754,7 @@ html, body {
   height: 400px;
   margin-top: -50px;
   position: relative;
-  background: #162433; }
+  background: url("../img/b03_bg.jpg") top center no-repeat; }
   .b03:before {
     left: 0;
     right: 0;
