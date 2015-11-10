@@ -13,7 +13,9 @@ $(document).ready(function() {
 
 $(window).on('load', function () {
     var $preloader = $('.preloader-inner');
-    $preloader.delay(1800).fadeOut('slow');
+    $preloader.fadeOut('slow');
+
+    // $preloader.delay(1800).fadeOut('slow');
 });
 
 ///Reply Slider
