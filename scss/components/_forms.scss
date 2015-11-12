@@ -13,10 +13,9 @@
 		text-align: center;
 		position: relative;
 		margin-bottom: 25px;
-		padding-bottom: 25px;
 		font-family: $font-pfd;
 		text-transform: uppercase;
-		background: url("../img/form-box-title.png") 50% 100% no-repeat;
+
 
 		span {
 			color: #c3a74c;
@@ -38,7 +37,7 @@
 		padding: 0 0 10px 0;
 
 		li {
-			margin-bottom: 20px;
+			margin-bottom: 8px;
 		}
 	}
 
@@ -50,7 +49,7 @@
 		font-size: 14px;
 		font-weight: 300;
 		line-height: 20px;
-		padding: 9px 10px;
+		padding: 4px 10px;
 		text-align: center;
 		background: transparent;
 		border: 1px solid #564f39;
@@ -106,10 +105,18 @@
 			line-height: 30px;
 			margin-bottom: 25px;
 			padding-bottom: 30px;
+			background: url("../img/form-box-title.png") 50% 100% no-repeat;
 
 			span {
 				font-size: 46px;
 				line-height: 50px;
+			}
+		}
+
+		ol {
+
+			li {
+				margin-bottom: 20px;
 			}
 		}
 
@@ -135,9 +142,10 @@
 }
 
 .btn-close {
-	top: 15px;
+	top: 5px;
 	z-index: 200;
-	right: 15px;
+	right: 5px;
+	line-height: 20px;
 	color: #FFFFFF;
 	font-size: 20px;
 	cursor: pointer;
@@ -156,8 +164,6 @@ label {
 	background: #fff;
 
 	.btn-close {
-		top: 3px;
-		right: 5px;
 		color: #141e26;
 	}
 

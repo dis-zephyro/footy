@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 $(window).on('load', function () {
     var $preloader = $('.preloader-inner');
-    $preloader.delay(1800).fadeOut('slow');
+    $preloader.addClass('hide');
 });
 
 ///Reply Slider
