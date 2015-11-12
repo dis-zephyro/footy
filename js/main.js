@@ -13,9 +13,7 @@ $(document).ready(function() {
 
 $(window).on('load', function () {
     var $preloader = $('.preloader-inner');
-    $preloader.fadeOut('slow');
-
-    // $preloader.delay(1800).fadeOut('slow');
+    $preloader.delay(1800).fadeOut('slow');
 });
 
 ///Reply Slider
@@ -109,3 +107,9 @@ function init(){
     myMap.behaviors.disable('multiTouch');
     myMap.geoObjects.add(myPlacemark);
 }
+
+
+// ----- Маска ----------
+jQuery(function($){
+    $("input[name='cf8_field_2']").mask("+7(999) 999-9999");
+});
